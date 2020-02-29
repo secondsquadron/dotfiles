@@ -1,0 +1,14 @@
+[Desktop Entry]
+Version=1.1
+Type=Application
+Terminal=false
+X-MultipleArgs=false
+Name=Firefox
+Comment=Latest Official Beta
+Icon=/opt/firefox/browser/chrome/icons/default/default128.png
+Exec=/opt/firefox/firefox %u
+Actions=
+Categories=Network;WebBrowser;
+MimeType=text/html;text/xml;application/xhtml+xml;application/xml;application/vnd.mozilla.xul+xml;application/rss+xml;application/rdf+xml;image/gif;image/jpeg;image/png;x-scheme-handler/http;x-scheme-handler/https;
+StartupWMClass=Firefox-Quantum
+StartupNotify=true

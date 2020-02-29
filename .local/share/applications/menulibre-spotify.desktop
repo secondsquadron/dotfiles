@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.1
+Type=Application
+Name=Spotify
+Terminal=false
+X-MultipleArgs=false
+Comment=Free music
+Icon=/usr/share/spotify/icons/spotify-linux-512.png
+Exec=/usr/bin/spotify
+Actions=
+Categories=Audio;Utility;
+StartupWMClass=Spotify
+StartupNotify=true
