@@ -1,0 +1,9 @@
+# Never prefer packages from the debian multimedia repository
+Package: *
+Pin: origin *.deb-multimedia.org
+Pin-Priority: 1
+
+# Allow upgrading only my-specific-software from debian multimedia repo
+Package: my-specific-software
+Pin: origin *.deb-multimedia.org
+Pin-Priority: 500

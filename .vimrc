@@ -56,11 +56,23 @@ Plug 'https://github.com/MarcWeber/vim-addon-mw-utils'
 Plug 'https://github.com/tomtom/tlib_vim'
 Plug 'https://github.com/honza/vim-snippets'
 
+" extended session
+Plug 'https://github.com/xolox/vim-misc.git'
+Plug 'https://github.com/xolox/vim-session.git'
+
 " badwolf color scheme - just a color scheme
 Plug 'https://github.com/sjl/badwolf/'
 
 " vimpager - use vim as pager 'vimpager'
 Plug 'https://github.com/rkitover/vimpager'
+
+" doxygen toolkit
+Plug 'https://github.com/vim-scripts/DoxygenToolkit.vim'
+
+" remap CTRL-] for cscope
+Plug 'https://github.com/chazy/cscope_maps'
+
+Plug 'https://github.com/ycm-core/YouCompleteMe'
 
 call plug#end()
 
@@ -91,6 +103,8 @@ inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
 nmap <A-l> <Plug>yankstack_substitute_older_paste
 nmap <A-L> <Plug>yankstack_substitute_newer_paste
 
+" do not autosave or ask sessions
+let g:session_autoload = "no"
 
 """"""""""""""""""""
 "general vim config"

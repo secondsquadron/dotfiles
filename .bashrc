@@ -63,3 +63,5 @@ source "$BASH_IT"/bash_it.sh
 
 # Load forgit
 [ -f ~/.forgit/forgit.plugin.sh ] && source ~/.forgit/forgit.plugin.sh
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
