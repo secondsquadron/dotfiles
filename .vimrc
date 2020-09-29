@@ -117,6 +117,9 @@ cd ~
 color badwolf
 set laststatus=2
 
+" YouCompleteMe multi file rename
+let g:ycm_clangd_args = [ '--cross-file-rename' ]
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
