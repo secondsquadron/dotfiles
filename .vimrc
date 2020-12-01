@@ -3,9 +3,12 @@
 """""""""""""""""
 call plug#begin('~/.vim/plugged')
 
+" sensible - general vim settings
+Plug 'https://github.com/tpope/vim-sensible.git'
+
 " fuzzy finder " fuzzy find in different contexts, commands :  Files GFiles Commits Buffers Marks Commands Windows History Lines Tags
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'https://github.com/junegunn/fzf.vim'
+"Plug 'https://github.com/junegunn/fzf.vim'
 
 " ctrlfs + ripgrep
 Plug 'https://github.com/dyng/ctrlsf.vim'
@@ -13,8 +16,8 @@ Plug 'https://github.com/dyng/ctrlsf.vim'
 " majutsushi tagbar " ctags based overview in a sidebar for general prog languages, mapped to F8
 Plug 'https://github.com/majutsushi/tagbar'
 
-" vim-airline nice status line
-Plug 'https://github.com/vim-airline/vim-airline'
+" powerline
+Plug 'https://github.com/powerline/powerline', { 'rtp': 'powerline/bindings/vim' }
 
 " multiple cursors " CTRL-n nexmatch CTRL-x skip match CTRL-p delete match
 Plug 'https://github.com/terryma/vim-multiple-cursors'
@@ -29,6 +32,8 @@ Plug 'https://github.com/terryma/vim-expand-region'
 
 " nerdtree - mapped to F3
 Plug 'https://github.com/scrooloose/nerdtree'
+" git for nerdtree
+Plug 'https://github.com/Xuyuanp/nerdtree-git-plugin'
 
 " vim-bufferline shows bufferline in status
 Plug 'https://github.com/bling/vim-bufferline'
@@ -72,6 +77,7 @@ Plug 'https://github.com/vim-scripts/DoxygenToolkit.vim'
 " remap CTRL-] for cscope
 Plug 'https://github.com/chazy/cscope_maps'
 
+" YouComplete completion
 Plug 'https://github.com/ycm-core/YouCompleteMe'
 
 call plug#end()
@@ -112,10 +118,11 @@ let g:session_autoload = "no"
 
 " change dir to home for nerdtree
 cd ~
+set laststatus=2
+set t_Co=256
 
 " nice colors
 color badwolf
-set laststatus=2
 
 " YouCompleteMe multi file rename
 let g:ycm_clangd_args = [ '--cross-file-rename' ]
@@ -132,7 +139,6 @@ filetype indent on
 
 " Set to auto read when a file is changed from the outside
 set autoread
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface

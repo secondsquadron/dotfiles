@@ -7,12 +7,12 @@ case $- in
 esac
 
 # Path to the bash it configuration
-export BASH_IT="/home/gergo/.bash-it"
+export BASH_IT="/home/gergo/projects/github/bash-it"
 
 # Lock and Load a custom theme file.
 # Leave empty to disable theming.
 # location /.bash_it/themes/
-export BASH_IT_THEME='powerline-plain'
+export BASH_IT_THEME='powerline'
 
 # (Advanced): Change this to the name of your remote repo if you
 # cloned bash-it with a remote other than origin such as `bash-it`.
@@ -60,8 +60,13 @@ export SCM_CHECK=true
 
 # Load Bash It
 source "$BASH_IT"/bash_it.sh
+source "/home/gergo/projects/github/forgit/forgit.plugin.sh"
 
-# Load forgit
+# Powerline
+. /usr/share/powerline/bindings/bash/powerline.sh
+
 [ -f ~/.forgit/forgit.plugin.sh ] && source ~/.forgit/forgit.plugin.sh
+export QT_QPA_PLATFORMTHEME=qt5ct
+
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
