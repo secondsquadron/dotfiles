@@ -74,3 +74,29 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
+
+# Check if we run under WSL
+uname -r | grep microsoft >/dev/null
+WSL=$?
+
+if [ $WSL -eq 0 ]; then
+    export WSL=1
+    # we are running under WSL so we can do WSL specific things here
+    export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf):0
+    export LIBGL_ALWAYS_INDIRECT=1
+    export DK_SCALE=1
+else
+    export WSL=0
+    # we are running under a standalone Linux -- currently only spaceholder for non WSL specific things in the future
+fi
+
+# Attach or start tmux
+if [[ $TERM == xterm-256color ]]; then # attach or start only in xterm256 terminals (wsl) but not in xterm or other terms
+tmux attach &> /dev/null
+
+    if [[ ! $TERM =~ screen ]]; then # if attach failed and we are not running under tmux, start one
+        exec tmux
+    fi
+
+fi
+
