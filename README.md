@@ -1,8 +1,7 @@
 # Dotfiles - secondsquadron
 
 These are my current dotfiles. I use them on **Debian** _testing_.
-There are (and will be) other files as well, some system configuration file,
-manually made desktop files, etc. which are enough important to backup and share.
+There are (and will be) other files as well, some system configuration file, manually made desktop files, etc. which are enough important to backup and share.
 
 ## General shell environment tools
 ### vim
@@ -10,8 +9,7 @@ I use **vim-plug** to maintain vim plugins. Pretty convenient!\
 **https://github.com/junegunn/vim-plug**
 
 ### bash
-As a bash user I find **bash-it** the best way to get nice themes,
-git integration and other functionality.
+As a bash user I find **bash-it** the best way to get nice themes, git integration and other functionality.
 I just use plain powerline theme.\
 **https://github.com/Bash-it/bash-it**
 
@@ -48,14 +46,11 @@ Tig is a convenient text interface to git.
 
 ## Development tools
 ### gdb
-Once there was a nice debugger called SoftICE which I really liked. This
-init file tries to bring back it's interface. Also, set the disassembly
-style to Intel. \
-**https://github.com/mammon/gdbinit/blob/master/gdb_init.txt**
+Once there was a nice debugger called SoftICE which I really liked. This init file tries to bring back it's interface. Also, set the disassembly style to Intel. \
+**https://github.com/gdbinit/Gdbinit**
 
 ### clang-format
-Clang is a great tool to stlyle code. Currently I just use the Qt stlyle for my
-code.
+Clang is a great tool to style code. Currently I just use the LLVM style with 4 IndentWidth.
 **https://clang.llvm.org/docs/ClangFormat.html**
 
 ## Other tools
